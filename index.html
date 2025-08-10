@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TradeLikeNoob — Free Trading Signals & Education (Indian & Crypto)</title>
+    <meta name="description"
+        content="Free trading signals & market education by Yodh Dhillon. Indian stocks, options and crypto technical analysis. Join the free Telegram channel for daily signals and live market commentary." />
+    <meta name="keywords"
+        content="Indian trading signals, crypto signals, free telegram trading, technical analysis India, stock market signals" />
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="TradeLikeNoob — Free Trading Signals & Education" />
+    <meta property="og:description"
+        content="Join my free Telegram channel for daily Indian & crypto trading signals, market analysis and education." />
+    <meta property="og:image" content="social-preview.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Schema (JSON-LD) -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Yodh Dhillon",
+    "url":"https://yourdomain.com",
+    "sameAs":[
+      "https://t.me/YOUR_TELEGRAM_HANDLE"
+    ],
+    "jobTitle":"Trading Educator & Technical Analyst",
+    "description":"Free trading signals and market education for Indian & crypto markets."
+  }
+  </script>
+
+    <style>
+        :root {
+            --bg: #0f1720;
+            --card: #0b1220;
+            --muted: #9aa4b2;
+            --accent: #00c78a;
+            --accent-2: #3aa1ff;
+            --danger: #ff5c6c;
+            --glass: rgba(255, 255, 255, 0.04);
+            --radius: 12px;
+            --maxwidth: 1100px;
+            --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+
+        [data-theme="light"] {
+            --bg: #f5f6fa;
+            /* light gray background */
+            --card: #ffffff;
+            /* pure white cards */
+            --muted: #4a4a4a;
+            /* medium-dark gray text */
+            --accent: #008f66;
+            /* green accent */
+            --accent-2: #1a73e8;
+            /* blue accent */
+            --danger: #d93025;
+            /* red accent for stop loss */
+            --glass: rgba(0, 0, 0, 0.05);
+            color: #1a1a1a;
+            /* main text dark */
+        }
+
+        [data-theme="light"] body {
+            background: linear-gradient(180deg, var(--bg), #eaeef3 120%);
+            color: #1a1a1a;
+        }
+
+        [data-theme="light"] .feature,
+        [data-theme="light"] .testimonial,
+        [data-theme="light"] .hero,
+        [data-theme="light"] .card {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent);
+        }
+
+        [data-theme="light"] input,
+        [data-theme="light"] textarea {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: #fff;
+            color: #1a1a1a;
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-sans);
+            background: linear-gradient(180deg, var(--bg), #07090c 120%);
+            color: #e6eef6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.45;
+        }
+
+        .container {
+            max-width: var(--maxwidth);
+            margin: 36px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 10px 0 0 0;
+            margin-bottom: 18px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #fff;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(20px, 2.4vw, 30px);
+            color: inherit
+        }
+
+        .nav {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 0;
+            font-weight: 600;
+            cursor: pointer;
+            background: var(--glass);
+            color: inherit;
+        }
+
+        .btn-cta {
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            color: white;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25)
+        }
+
+        .theme-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            background: transparent
+        }
+
+        /* Hero */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 28px;
+            align-items: center;
+            padding: 28px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+            border-radius: var(--radius);
+            backdrop-filter: blur(6px);
+        }
+
+        .hero-left h2 {
+            font-size: clamp(20px, 3.4vw, 36px);
+            margin: 6px 0 12px
+        }
+
+        .hero p {
+            color: var(--muted);
+            margin: 0 0 18px
+        }
+
+        .cta-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .small {
+            font-size: 13px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.06)
+        }
+
+        .hero-right {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+            padding: 16px;
+            border-radius: 12px
+        }
+
+        .card {
+            background: var(--card);
+            padding: 14px;
+            border-radius: 12px
+        }
+
+        /* features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 18px
+        }
+
+        .feature {
+            padding: 16px;
+            border-radius: 12px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent)
+        }
+
+        .feature h3 {
+            margin: 4px 0 8px
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        /* testimonials */
+        .testimonials {
+            margin-top: 22px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px
+        }
+
+        .testimonial {
+            padding: 14px;
+            border-radius: 12px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent)
+        }
+
+        .t-meta {
+            display: flex;
+            gap: 10px;
+            align-items: center
+        }
+
+        /* footer */
+        footer {
+            margin-top: 30px;
+            padding: 16px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            color: var(--muted)
+        }
+
+        /* responsive */
+        /* MOBILE-FIRST RESPONSIVE FIXES */
+
+        /* Base: All devices */
+        .container {
+            max-width: var(--maxwidth);
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Tablets & smaller laptops */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .hero-right {
+                margin-top: 20px;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta-row {
+                justify-content: center;
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav a {
+                display: none;
+            }
+        }
+
+        /* Large phones & phablets */
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+
+            .counters {
+                justify-content: center;
+            }
+
+            .counter {
+                min-width: 100px;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 500px) {
+            .container {
+                padding: 0 12px;
+            }
+
+            .hero {
+                padding: 16px;
+            }
+
+            h1,
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .btn,
+            .btn-cta {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            .telegram-join {
+                bottom: 12px;
+                right: 12px;
+                padding: 10px;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                justify-content: center;
+                font-size: 0;
+            }
+
+            .telegram-join svg {
+                margin: 0;
+            }
+        }
+
+        /* floating telegram button */
+        .telegram-join {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 80;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            color: white;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            font-weight: 700;
+            transform: translateY(0);
+            transition: transform .18s ease;
+        }
+
+        .telegram-join:active {
+            transform: translateY(2px)
+        }
+
+        /* simple icon placeholder */
+        .avatar {
+            width: 46px;
+            height: 46px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #111, #333);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700
+        }
+
+        /* counters */
+        .counters {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .counter {
+            padding: 12px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), transparent);
+            min-width: 120px;
+            text-align: center
+        }
+
+        .counter strong {
+            display: block;
+            font-size: 20px
+        }
+    </style>
+</head>
+
+<body>
+    <a class="telegram-join" href="https://t.me/TradeLikeNoob_21" target="_blank" rel="noopener noreferrer"
+        aria-label="Join free Telegram channel">
+        <svg width="20" height="20" viewBox="0 0 240 240" aria-hidden style="display:block">
+            <path fill="white" d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0z" />
+        </svg>
+        Join Telegram — Free
+    </a>
+
+    <div class="container" id="page">
+        <header>
+            <div class="brand" role="banner">
+                <div class="logo" aria-hidden>TLN</div>
+                <div>
+                    <div style="font-size:13px;color:var(--muted)">TradeLikeNoob</div>
+                    <h1 style="font-size:16px;margin-top:6px">Trading Signals & Education</h1>
+                </div>
+            </div>
+
+            <nav class="nav" role="navigation" aria-label="Main">
+                <a class="btn" href="#about">About</a>
+                <a class="btn" href="#services">Services</a>
+                <a class="btn" href="#contact">Contact</a>
+                <!-- <button class="btn btn-cta" onclick="location.href='https://t.me/YOUR_TELEGRAM_LINK'"
+                    aria-label="Join Telegram">Join Telegram — Free</button> -->
+                <button id="themeToggle" class="theme-toggle" aria-pressed="false" title="Toggle theme">🌗</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero" aria-labelledby="hero-heading">
+                <div class="hero-left">
+                    <div class="small">Free • Telegram • Indian & Crypto</div>
+                    <h2 id="hero-heading">Daily Trading Signals & Market Education — Learn to trade with confidence</h2>
+                    <p>I'm Yodh Dhillon — technical analyst with 2+ years of experience in Indian markets and crypto. I
+                        share free signals, trade plans, and easy-to-follow lessons on Telegram.</p>
+
+                    <div class="cta-row">
+                        <button class="btn btn-cta" onclick="location.href='https://t.me/TradeLikeNoob_21'">Join
+                            Telegram — Free</button>
+                        <a class="btn" href="#services">See Services</a>
+                    </div>
+
+                    <div style="margin-top:16px" class="counters" aria-hidden>
+                        <div class="counter card"><strong data-target="2">0</strong><span class="muted">Years
+                                Experience</span></div>
+                        <div class="counter card"><strong data-target="500">0</strong><span class="muted">Trades
+                                Analysed</span></div>
+                        <div class="counter card"><strong data-target="100">0</strong><span class="muted">Free
+                                Signals</span></div>
+                    </div>
+                </div>
+
+                <aside class="hero-right" aria-label="Quick info">
+                    <div class="card">
+                        <div style="display:flex;align-items:center;gap:12px">
+                            <div class="avatar" aria-hidden>YD</div>
+                            <div>
+                                <div style="font-weight:700">Yodh Dhillon</div>
+                                <div class="muted" style="font-size:13px">Technical Analyst — Indian & Crypto</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div>
+                                <div style="font-weight:700">What you get</div>
+                                <div class="muted" style="font-size:13px">Daily signals, trade plans, risk management &
+                                    lessons.</div>
+                            </div>
+                            <div style="text-align:right">
+                                <div style="font-weight:800;font-size:18px">Free</div>
+                                <div class="muted" style="font-size:12px">Telegram channel</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div style="font-weight:700">Why trust?</div>
+                        <div class="muted" style="font-size:13px">Transparent results, shared setups, and educational
+                            explanations — no paid walls.</div>
+                    </div>
+                </aside>
+            </section>
+
+            <section id="about" style="margin-top:22px">
+                <div style="display:flex;justify-content:space-between;gap:20px;align-items:flex-start;flex-wrap:wrap">
+                    <div style="flex:1;min-width:260px">
+                        <h3>About Me</h3>
+                        <p class="muted">I’m a web designer & technical analyst from Amritsar with 2+ years actively
+                            trading Indian markets and cryptocurrencies. I focus on clean trade plans, strict risk
+                            management, and teaching beginners to develop a repeatable process.</p>
+                    </div>
+
+                    <div style="min-width:260px;max-width:420px">
+                        <h3>Core Skills</h3>
+                        <ul class="muted" style="padding-left:18px;margin-top:6px">
+                            <li>Technical Analysis (price action, support/resistance)</li>
+                            <li>Options and Equity trades — Indian markets</li>
+                            <li>Crypto market structure & setups</li>
+                            <li>Risk management & position sizing</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" style="margin-top:18px">
+                <h3>Services / What I Share</h3>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Daily Signals</h3>
+                        <div class="muted">Clear entries, stop loss & target — shared on Telegram with reasoning.</div>
+                    </div>
+                    <div class="feature">
+                        <h3>Market Analysis</h3>
+                        <div class="muted">Daily/weekly market outlook, levels to watch, and trade ideas.</div>
+                    </div>
+                    <div class="feature">
+                        <h3>Education</h3>
+                        <div class="muted">Bite-sized lessons to build your trading skillset — free in the channel.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section style="margin-top:20px">
+                <h3>Testimonials & Results</h3>
+                <div class="testimonials">
+                    <div class="testimonial">
+                        <div class="t-meta">
+                            <div style="width:44px;height:44px;border-radius:8px;background:#111"></div>
+                            <div>
+                                <div style="font-weight:700">Simran Kaur</div>
+                                <div class="muted" style="font-size:13px">"Clear signals and explanations — helped me
+                                    improve my entries."</div>
+                            </div>
+                        </div>
+                        <!-- <div style="margin-top:10px" class="muted">(screenshot of trade results or chat can go here)
+                        </div> -->
+                    </div>
+                    <div class="testimonial">
+                        <div class="t-meta">
+                            <div style="width:44px;height:44px;border-radius:8px;background:#111"></div>
+                            <div>
+                                <div style="font-weight:700">Sanjay Kumar</div>
+                                <div class="muted" style="font-size:13px">"Good risk management focus and consistent
+                                    setups."</div>
+                            </div>
+                        </div>
+                        <!-- <div style="margin-top:10px" class="muted">Add real screenshots (crop sensitive info) for
+                            stronger social proof.</div> -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" style="margin-top:20px">
+                <h3>Contact</h3>
+                <div style="display:flex;gap:16px;flex-wrap:wrap;">
+                    <form style="flex:1;min-width:260px;max-width:640px"
+                        action="https://formspree.io/f/xjkojope" method="POST">
+                        <label class="muted">Name<input
+                                style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"
+                                required type="text" name="Name"></label>
+                        <label class="muted" style="display:block;margin-top:10px">Email<input type="email"
+                                style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"
+                                required type="email" name="Email"></label>
+                        <label class="muted" style="display:block;margin-top:10px">Message<textarea rows="4"
+                                style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"
+                                required name="Message"></textarea></label>
+                        <div style="margin-top:10px">
+                            <button class="btn btn-cta" type="submit">Send Message</button>
+                            <!-- <a class="btn" href="mailto:youremail@example.com" style="margin-left:8px">Or Email</a> -->
+                        </div>
+                    </form>
+
+                    <div style="min-width:220px;">
+                        <div class="card">
+                            <div style="font-weight:700">Join the Telegram Channel</div>
+                            <div class="muted" style="margin-top:8px">Free signals, lessons and market commentary — no
+                                paid tiers.</div>
+                            <div style="margin-top:12px">
+                                <a class="btn btn-cta" href="https://t.me/TradeLikeNoob_21" target="_blank"
+                                    rel="noopener noreferrer">Join Telegram — Free</a>
+                            </div>
+                        </div>
+                        <div class="card" style="margin-top:12px">
+                            <div style="font-weight:700">Where I'm based</div>
+                            <div class="muted" style="margin-top:6px">Ludhiana, Punjab — India</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="muted">© <span id="year"></span> Yodh Dhillon — Free Telegram Signals</div>
+                <!-- <div class="muted">Built for speed & SEO</div> -->
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // theme - respects system and toggle
+        (function () {
+            const pref = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            const root = document.documentElement;
+            const stored = localStorage.getItem('site-theme');
+            const theme = stored || pref;
+            root.setAttribute('data-theme', theme);
+            document.getElementById('themeToggle').addEventListener('click', () => {
+                const current = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+                root.setAttribute('data-theme', current);
+                localStorage.setItem('site-theme', current);
+                document.getElementById('themeToggle').setAttribute('aria-pressed', current === 'dark' ? 'false' : 'true');
+            });
+        })();
+
+        // counters animation
+        (function () {
+            const counters = document.querySelectorAll('[data-target]');
+            const animate = (el, target) => {
+                let start = 0, duration = 1400;
+                const stepTime = Math.max(20, Math.floor(duration / target));
+                const step = () => {
+                    start += Math.ceil(target / (duration / stepTime));
+                    if (start >= target) el.textContent = target;
+                    else { el.textContent = start; setTimeout(step, stepTime) }
+                };
+                step();
+            };
+            // when visible
+            const io = new IntersectionObserver(entries => {
+                for (const e of entries) {
+                    if (e.isIntersecting) {
+                        for (const c of counters) { animate(c, +c.getAttribute('data-target')) }
+                        io.disconnect();
+                        break;
+                    }
+                }
+            }, { threshold: 0.4 });
+            io.observe(document.querySelector('.counters'));
+        })();
+
+        // update year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // small SEO: set canonical when domain known (replace in deployment)
+        // <link rel="canonical" href="https://yourdomain.com" />
+    </script>
+</body>
+
+</html>
